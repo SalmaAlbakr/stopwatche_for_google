@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:stopwatche_for_google/stop_watch_screen.dart';
+import 'package:stopwatch/stop_watch_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
