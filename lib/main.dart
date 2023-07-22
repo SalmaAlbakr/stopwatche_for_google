@@ -36,7 +36,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return  MaterialApp(
       theme: ThemeData(
-        appBarTheme: AppBarTheme(color: Colors.deepPurpleAccent),
+        scaffoldBackgroundColor:  Colors.grey[300],
+
+        appBarTheme: AppBarTheme(
+            color: Colors.deepPurpleAccent),
         elevatedButtonTheme: ElevatedButtonThemeData(
             style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Color(0xff5200d7))
@@ -46,6 +49,7 @@ class _MyAppState extends State<MyApp> {
 
       ),
       darkTheme: ThemeData(
+        scaffoldBackgroundColor: Colors.black,
         brightness: Brightness.dark,
         appBarTheme: AppBarTheme(color: Color(0xFF624F82)),
         elevatedButtonTheme: ElevatedButtonThemeData(
@@ -53,7 +57,6 @@ class _MyAppState extends State<MyApp> {
                 backgroundColor: MaterialStateProperty.all(Color(0xFF533f6a))
             )
         ),
-        /* dark theme settings */
       ),
       themeMode: _themeMode,
       localizationsDelegates: context.localizationDelegates,

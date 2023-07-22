@@ -98,14 +98,13 @@ class _StopWatchScreenState extends State<StopWatchScreen> {
             width: 300,
             shape: PolygonShape(numberOfSides: 9),
             child: Container(
-              //color: Colors.white,
+             // color: Colors.blueGrey,
               child: Center(
                 child: Text(
                   time,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 50,
-
                     // color: Colors.deepPurple[900],
                   ),
                 ),
