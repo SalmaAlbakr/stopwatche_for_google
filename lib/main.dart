@@ -49,7 +49,7 @@ class _MyAppState extends State<MyApp> {
 
       ),
       darkTheme: ThemeData(
-        scaffoldBackgroundColor: Colors.black,
+       // scaffoldBackgroundColor: Colors.black,
         brightness: Brightness.dark,
         appBarTheme: AppBarTheme(color: Color(0xFF624F82)),
         elevatedButtonTheme: ElevatedButtonThemeData(
