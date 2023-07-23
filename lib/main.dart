@@ -2,22 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:stopwatch/stop_watch_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 
-
 void main() async {
-
-   WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
 
   runApp(
     EasyLocalization(
-        supportedLocales: [
-          Locale('en'),
-          Locale('ar')
-        ],
+        supportedLocales: [Locale('en'), Locale('ar')],
         path: 'assets/translation',
         fallbackLocale: Locale('ar'),
-        child: MyApp()
-    ),
+        child: MyApp()),
   );
 }
 
@@ -34,29 +28,26 @@ class _MyAppState extends State<MyApp> {
   ThemeMode _themeMode = ThemeMode.system;
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       theme: ThemeData(
-        scaffoldBackgroundColor:  Colors.grey[300],
-
+        scaffoldBackgroundColor: Colors.grey[300],
         appBarTheme: AppBarTheme(
-            color: Colors.deepPurpleAccent),
+          color: Colors.deepPurpleAccent,
+        ),
         elevatedButtonTheme: ElevatedButtonThemeData(
             style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Color(0xff5200d7))
-            )
-        ),
+          backgroundColor: MaterialStateProperty.all(
+            Color(0xff5200d7),
+          ),
+        )),
         brightness: Brightness.light,
-
       ),
       darkTheme: ThemeData(
-       // scaffoldBackgroundColor: Colors.black,
         brightness: Brightness.dark,
         appBarTheme: AppBarTheme(color: Color(0xFF624F82)),
         elevatedButtonTheme: ElevatedButtonThemeData(
             style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Color(0xFF533f6a))
-            )
-        ),
+                backgroundColor: MaterialStateProperty.all(Color(0xFF533f6a)))),
       ),
       themeMode: _themeMode,
       localizationsDelegates: context.localizationDelegates,
@@ -65,10 +56,10 @@ class _MyAppState extends State<MyApp> {
       home: StopWatchScreen(),
     );
   }
+
   void changeTheme(ThemeMode themeMode) {
     setState(() {
       _themeMode = themeMode;
     });
   }
 }
-

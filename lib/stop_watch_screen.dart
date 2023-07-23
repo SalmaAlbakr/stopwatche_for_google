@@ -16,7 +16,7 @@ class _StopWatchScreenState extends State<StopWatchScreen> {
   String time = "00:00:00";
   var swatch = Stopwatch();
   final dur = const Duration(seconds: 1);
-  String startButton =" ${"Start".tr()}";
+  String startButton = " ${"Start".tr()}";
 
   void startTimer() {
     Timer(dur, keepRunning);
@@ -65,28 +65,26 @@ class _StopWatchScreenState extends State<StopWatchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-       // backgroundColor: Colors.deepPurpleAccent,
-        title:  Row(
+        title: Row(
           children: [
             Text(
               "AppName".tr(),
             ),
             Expanded(child: SizedBox()),
-
-            // if mode == dark ?
-
-
-            // :
-
             GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) =>SettingScreen() ));
-                },
-                child: Icon(Icons.settings))
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SettingScreen(),
+                  ),
+                );
+              },
+              child: Icon(Icons.settings),
+            )
           ],
         ),
       ),
-      //backgroundColor: Colors.grey[300],
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -98,14 +96,12 @@ class _StopWatchScreenState extends State<StopWatchScreen> {
             width: 300,
             shape: PolygonShape(numberOfSides: 9),
             child: Container(
-             // color: Colors.blueGrey,
               child: Center(
                 child: Text(
                   time,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 50,
-                    // color: Colors.deepPurple[900],
                   ),
                 ),
               ),
@@ -123,7 +119,7 @@ class _StopWatchScreenState extends State<StopWatchScreen> {
                       child: Text(
                         startButton,
                         style: const TextStyle(
-                         // color: Colors.white,
+                          // color: Colors.white,
                           fontStyle: FontStyle.italic,
                           fontSize: 25,
                           fontWeight: FontWeight.w600,
@@ -132,13 +128,13 @@ class _StopWatchScreenState extends State<StopWatchScreen> {
                     )
                   : ElevatedButton(
                       style: const ButtonStyle(
-                       // backgroundColor: MaterialStatePropertyAll(Colors.deepPurple),
-                      ),
+                          // backgroundColor: MaterialStatePropertyAll(Colors.deepPurple),
+                          ),
                       onPressed: stopwatch,
-                      child:  Text(
+                      child: Text(
                         "Stop".tr(),
                         style: TextStyle(
-                         // color: Colors.white,
+                          // color: Colors.white,
                           fontStyle: FontStyle.italic,
                           fontSize: 25,
                           fontWeight: FontWeight.w600,
@@ -148,16 +144,16 @@ class _StopWatchScreenState extends State<StopWatchScreen> {
               ElevatedButton(
                 onPressed: restartWatch,
                 child: Container(
-                 // height: 40,
-                 // width: 90,
+                  // height: 40,
+                  // width: 90,
                   alignment: Alignment.center,
                   // decoration: const BoxDecoration(
                   //   color: Colors.deepPurple,
                   // ),
-                  child:  Text(
+                  child: Text(
                     "Restart".tr(),
                     style: TextStyle(
-                     // color: Colors.white,
+                      // color: Colors.white,
                       fontStyle: FontStyle.italic,
                       fontSize: 25,
                       fontWeight: FontWeight.w600,
